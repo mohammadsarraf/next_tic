@@ -1,0 +1,22 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+  
+  
+  
+.highlighted-box2 {
+  background-color: rgb(222, 159, 149);
+}
+  
+.highlighted-box3 {
+    background-color: rgb(122, 199, 215);
+}
+
+.board:nth-child(4){
+  margin-bottom: auto;
+}
+
+
+  
