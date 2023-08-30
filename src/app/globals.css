@@ -4,3 +4,80 @@
 
 
 
+@keyframes moveForward2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateY(-108.5px); 
+    }
+}
+
+@keyframes moveBack2 {
+    from {
+        transform: translateY(-108.5px); 
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-move-forward2 {
+    animation: moveForward2 0.5s forwards;
+}
+
+.animate-move-back2 {
+    animation: moveBack2 0.5s forwards;
+}
+
+@keyframes moveForward3 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateY(-217px); 
+    }
+}
+
+@keyframes moveBack3 {
+    from {
+        transform: translateY(-217px); 
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-move-forward3 {
+    animation: moveForward3 0.5s forwards;
+}
+
+.animate-move-back3 {
+    animation: moveBack3 0.5s forwards;
+}
+
+@keyframes moveForward4 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateY(-325px); 
+    }
+}
+
+@keyframes moveBack4 {
+    from {
+        transform: translateY(-325px); 
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-move-forward4 {
+    animation: moveForward4 0.5s forwards;
+}
+
+.animate-move-back4 {
+    animation: moveBack4 0.5s forwards;
+}

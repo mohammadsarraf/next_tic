@@ -1,14 +1,15 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { Board } from "./Components/Board";
-import { ScoreBoard } from "./Components/ScoreBoard";
+import ScoreBoard from "./Components/ScoreBoard";
 import Dice from './Components/Dice'
 import { initializeApp } from "firebase/app";
 import { getFirestore, updateDoc } from "firebase/firestore";
 import { doc, setDoc, onSnapshot, getDoc } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
+import Options from "./Components/Options";
 import ControlUnit from "./Components/ControlUnit";
-import * as cotl from "./Components/Class.js";
+import * as cotl from './Functions/Class';
 import './Components/App.css';
 import './Components/GameOver.css'
 
@@ -300,13 +301,13 @@ export default function Home() {
 
 			) : (<></>)}
 			<div className="Game">
-
 				<ScoreBoard names={{ playerOneName: "POne", playerTwoName: "PTwo" }} scores={cotl.updateScore(playerOne, playerTwo)} playerXPlaying={playerXPlaying} ID={sessionID} />
+				
 				<Board name={"X"} board={playerOne} onClick={handleBoxClickPlayerOne} mouseHoverTile={mouseHoverTile} />
 				<Dice rotateDice={rotateDice} />
 				<Board name={"O"} board={playerTwo} onClick={handleBoxClickPlayerTwo} mouseHoverTile={mouseHoverTile} />
 			</div>
-			<ControlUnit resetGame={resetBoard} joinGame={AlertSession} />
+			<Options resetGame={resetBoard} joinGame={AlertSession}/>
 		</>
 
 	)

@@ -1,9 +1,12 @@
+import React from 'react';
 import '../globals.css';
+import Options from '../Components/Options';
 
 export default function notes() {
-    return(
-        <div>
-            <h1 className="bg-blue-500">Hello world!</h1>
+
+    return (
+        <div className="bg-black min-h-screen">
+            <Options />
         </div>
-    )
+    );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as cotl from './Class.js';
+import * as cotl from '../Functions/Class';
 import Box from './Box.tsx';
 import './Board.css';
 
