@@ -9,7 +9,7 @@ interface ScoreBoardProps {
         playerOneName: string;
         playerTwoName: string;
     };
-    ID: number;
+    ID: string;
     playerXPlaying: boolean;
 }
 
