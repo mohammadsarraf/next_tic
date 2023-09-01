@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import { Board } from "./Components/Board";
+// import {Board} from './Components/Board'
+import Board from './Components/Board.tsx'
 import ScoreBoard from "./Components/ScoreBoard";
 import Dice from './Components/Dice'
 import { initializeApp } from "firebase/app";
@@ -20,7 +21,7 @@ export default function Home() {
 	const [playerTwo, setPlayerTwoBoard] = useState(Array(9).fill(null))
 	const [sessionID, setSessionID] = useState("000000");
 	const [playerXPlaying, setPlayerxPlayer] = useState(true)
-	const [die, setDie] = useState(null)
+	const [die, setDie] = useState(0)
 	const [userName, setUserName] = useState(null)
 
 	const firebaseConfig = {
@@ -303,9 +304,9 @@ export default function Home() {
 			<div className="Game">
 				<ScoreBoard names={{ playerOneName: "POne", playerTwoName: "PTwo" }} scores={cotl.updateScore(playerOne, playerTwo)} playerXPlaying={playerXPlaying} ID={sessionID} />
 				
-				<Board name={"X"} board={playerOne} onClick={handleBoxClickPlayerOne} mouseHoverTile={mouseHoverTile} />
+				<Board name={"X"} board={playerOne} onClick={handleBoxClickPlayerOne} die={die} isPlaying={playerXPlaying}/>
 				<Dice rotateDice={rotateDice} />
-				<Board name={"O"} board={playerTwo} onClick={handleBoxClickPlayerTwo} mouseHoverTile={mouseHoverTile} />
+				<Board name={"O"} board={playerTwo} onClick={handleBoxClickPlayerTwo} die={die} isPlaying={playerXPlaying}/>
 			</div>
 			<Options resetGame={resetBoard} joinGame={AlertSession}/>
 		</>

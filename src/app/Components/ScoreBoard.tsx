@@ -19,7 +19,7 @@ const ScoreBoard: React.FC<ScoreBoardProps> = (props) => {
     const { playerOneName, playerTwoName } = props.names;
     
     return (
-        <div className="flex flex-col items-center justify-between w-64 text-lg bg-white shadow-md rounded-md font-bold my-2 mb-44">
+        <div className="flex flex-col items-center justify-between w-64 text-lg bg-white shadow-md rounded-md font-bold my-2 mb-auto">
             <div className="score-header">Game Room: {props.ID}</div>
             <section className="flex w-full">
                 <span className={`w-1/2 py-3 text-center text-purple-700 ${!props.playerXPlaying ? "border-b-[6px] border-transparent": "border-b-[6px] border-purple-700"}`}>
