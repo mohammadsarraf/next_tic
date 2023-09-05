@@ -1,39 +1,42 @@
-export const handleGameOver = (playerOne, playerTwo) => {
+export const handleGameOver = (playerOne: (number | null)[], playerTwo: (number | null)[] ) => {
 	if (!playerOne.includes(null) || !playerTwo.includes(null)) {
 		return true
 	}
 	return false
 };
 
-export const points = (board, index) => {
-
-	const column = [board[index], board[index + 3], board[index + 6]]
-
-	if (column[0] === column[1] && column[0] === column[2]) {
-		return column[0] * 9;
+export const points = (board: (number | null)[], index: number) => {
+	const column = [board[index], board[index + 3], board[index + 6]];
+  
+	// Replace null values with 0 in the column
+	const columnWithZeros = column.map((value) => (value === null ? 0 : value));
+  
+	if (columnWithZeros[0] === columnWithZeros[1] && columnWithZeros[0] === columnWithZeros[2]) {
+	  return columnWithZeros[0] * 9;
 	}
-	if (column[0] === column[2]) {
-		return column[0] * 4 + column[1];
+	if (columnWithZeros[0] === columnWithZeros[2]) {
+	  return columnWithZeros[0] * 4 + columnWithZeros[1];
 	}
-	if (column[1] === column[2]) {
-		return column[1] * 4 + column[0];
+	if (columnWithZeros[1] === columnWithZeros[2]) {
+	  return columnWithZeros[1] * 4 + columnWithZeros[0];
 	}
-	if (column[0] === column[1]) {
-		return column[0] * 4 + column[2];
+	if (columnWithZeros[0] === columnWithZeros[1]) {
+	  return columnWithZeros[0] * 4 + columnWithZeros[2];
 	} else {
-		return column[0] + column[1] + column[2];
+	  return columnWithZeros[0] + columnWithZeros[1] + columnWithZeros[2];
 	}
-};
+  };
+  
 
-export const updateScore = (playerOne, playerTwo) => {
-	const calcScore = (player) => {
+export const updateScore = (playerOne: (number | null)[], playerTwo: (number | null)[] ) => {
+	const calcScore = (player: (number | null)[]) => {
 		return points(player, 0) + points(player, 1) + points(player, 2)
 	}
 	return ({ playerOne: calcScore(playerOne), playerTwo: calcScore(playerTwo) })
 };
 
-export const sort = (board) => {
-	function moveZerosToEnd(arr) {
+export const sort = (board: (number | null)[]) => {
+	function moveZerosToEnd(arr: (number | null)[]) {
 		let nonNull = [];
 		let Null = [];
 
@@ -60,7 +63,7 @@ export const sort = (board) => {
 	return combinedList1
 };
 
-export const updateChange = (roll, index, player) => {
+export const updateChange = (roll: number, index: number, player: (number | null)[]) => {
 	let i = index % 3;
 
 	if (player[i] === roll) {
@@ -75,7 +78,7 @@ export const updateChange = (roll, index, player) => {
 	sort(player)
 }
 
-export const winner = (playerOne, playerTwo) => {
+export const winner = (playerOne: (number | null)[], playerTwo: (number | null)[]) => {
 	const list = updateScore(playerOne, playerTwo)
 
 	if (list.playerOne > list.playerTwo) {
@@ -100,9 +103,9 @@ export const sessionIDGenerator = () => {
 	return radnNum.toString().padStart(6, '0');
 }
 
-export const match = (array) => {
+export const match = (array: number[]) => {
 
-	let matchingIndexes = [];
+	let matchingIndexes: (number | null) [] = [];
 
 	for (let i = 0; i < array.length; i++) {
 		for (let j = i + 1; j < array.length; j++) {
