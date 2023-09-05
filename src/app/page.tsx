@@ -12,6 +12,7 @@ import * as cotl from './Functions/Class';
 import * as fb from './Functions/firebase'
 import './Components/App.css';
 import './Components/GameOver.css'
+import './globals.css'
 
 
 export default function Home() {
@@ -212,15 +213,16 @@ export default function Home() {
 	return (
 		<>
 			{cotl.handleGameOver(playerOne, playerTwo) ? (
-				<section className="gameover-section">
-					<section className="gameover-container">
-						<h1 className="game-decision">{cotl.winner(playerOne, playerTwo)}</h1>
-						<section className="button-section">
-							<button onClick={resetBoard}>Reset Game</button>
-							<button onClick={AlertSession}>Join Game</button>
+				<section className="absolute z-20 bg-black bg-opacity-40 w-screen h-screen flex items-center justify-center m-auto">
+					<section className="flex flex-col items-center justify-center transform -translate-y-20 m-auto">
+						<h1 className="text-yellow-400 text-5xl mb-10">{cotl.winner(playerOne, playerTwo)}</h1>
+						<section className="w-auto">
+							<button className="font-bold py-4 text-gray-300 bg-purple-900 rounded-lg w-full text-1.5rem m-auto mb-2" onClick={resetBoard}>Reset Game</button>
+							<button className="font-bold py-4 text-gray-300 bg-purple-900 rounded-lg w-full text-1.5rem m-auto mb-2" onClick={AlertSession}>Join Game</button>
 						</section>
 					</section>
 				</section>
+
 
 			) : (<></>)}
 			<div className="Game">

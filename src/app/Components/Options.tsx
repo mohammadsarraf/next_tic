@@ -23,13 +23,13 @@ const Options: React.FC<OptionsProps> = (props) => {
 	return (
 		<>
 			<div className={`flex flex-col relative max-w-min `}>
-				<button className={`bg-violet-800 text-white font-bold ${(width < 500) ? (' w-12 h-12') : ('w-20 h-20')} h-20 text-4xl text-center rounded-lg m-5 mt-2 ml-2  cursor-pointer z-10`} onClick={handleClick}
+				<button className={`bg-violet-800 text-white  ${(width < 500) ? (` w-auto h-auto p-2 text-4xl mb-auto mt-4 ml-1`) : (`w-20 h-20 font-bold `)} h-20 text-4xl text-center rounded-lg m-5 mt-2 ml-2  cursor-pointer z-10`} onClick={handleClick}
 				>
 					⚙
 				</button>
-				<button className={`bg-violet-800 text-white font-bold ${(width < 500) ? (' w-12 h-12') : ('w-20 h-20')} h-20 text-xl text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer ${toggleAnimationClassSecondChild}`} onClick={props.joinGame}>Join Game</button>
-				<button className={`bg-violet-800 text-white font-bold ${(width < 500) ? (' w-12 h-12') : ('w-20 h-20')} h-20 text-xl text-center rounded-lg  m-5 mt-2 ml-2 cursor-pointer ${toggleAnimationClassThirdChild}`} onClick={props.resetGame}>Reset Game</button>
-				<button className={`bg-violet-800 text-white font-bold ${(width < 500) ? (' w-12 h-12') : ('w-20 h-20')} h-20 text-xl text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer ${toggleAnimationClassForthChild}`}>HTP</button>
+				<button className={`bg-violet-800 text-white  ${(width < 500) ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassSecondChild}`)} h-20 text-xl  text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer `} onClick={props.joinGame}>Join Game</button>
+				<button className={`bg-violet-800 text-white  ${(width < 500) ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassThirdChild}`)} h-20 text-xl  text-center rounded-lg  m-5 mt-2 ml-2 cursor-pointer `} onClick={props.resetGame}>Reset Game</button>
+				<button className={`bg-violet-800 text-white  ${(width < 500) ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassForthChild}`)} h-20 text-xl  text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer `}>HTP</button>
 			</div>
 		</>
 	);
