@@ -3,15 +3,12 @@ import React, { useState, useEffect } from "react";
 import Board from './Components/Board'
 import ScoreBoard from "./Components/ScoreBoard";
 import Dice from './Components/Dice'
-import { initializeApp } from "firebase/app";
-import { getFirestore, updateDoc } from "firebase/firestore";
-import { doc, setDoc, onSnapshot, getDoc } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
+import { updateDoc } from "firebase/firestore";
+import { doc, onSnapshot, } from "firebase/firestore";
 import Options from "./Components/Options";
 import * as cotl from './Functions/Class';
 import * as fb from './Functions/firebase'
 import './Components/App.css';
-import './Components/GameOver.css'
 import './globals.css'
 
 
@@ -19,13 +16,12 @@ export default function Home() {
 
 	const [playerOne, setPlayerOneBoard] = useState(Array(9).fill(null))
 	const [playerTwo, setPlayerTwoBoard] = useState(Array(9).fill(null))
-	const [sessionID, setSessionID] = useState("000000");
+	const [sessionID, setSessionID] = useState(cotl.sessionIDGenerator());
 	const [playerXPlaying, setPlayerxPlayer] = useState(true)
 	const [die, setDie] = useState(0)
 	const [userName, setUserName] = useState("0")
 
-	// const app = fb.app
-	// const analytics = fb.analytics
+
 	const db = fb.db
 
 	const AlertSession = () => {
