@@ -27,9 +27,9 @@ const Options: React.FC<OptionsProps> = (props) => {
 				>
 					⚙
 				</button>
-				<button className={`bg-violet-800 text-white  ${false ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassSecondChild}`)} h-20 text-xl  text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer `} onClick={props.joinGame}>Join Game</button>
-				<button className={`bg-violet-800 text-white  ${false ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassThirdChild}`)} h-20 text-xl  text-center rounded-lg  m-5 mt-2 ml-2 cursor-pointer `} onClick={props.resetGame}>Reset Game</button>
-				<button className={`bg-violet-800 text-white  ${false ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassForthChild}`)} h-20 text-xl  text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer `}>HTP</button>
+				<button className={`bg-violet-800 text-white  ${false ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassSecondChild}`)}  text-xl  text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer `} onClick={props.joinGame}>Join Game</button>
+				<button className={`bg-violet-800 text-white  ${false ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassThirdChild}`)}  text-xl  text-center rounded-lg  m-5 mt-2 ml-2 cursor-pointer `} onClick={props.resetGame}>Reset Game</button>
+				<button className={`bg-violet-800 text-white  ${false ? (` w-auto h-auto p-2 text-sm mb-auto mt-4 ml-1`) : (`w-20 h-20  font-bold ${toggleAnimationClassForthChild}`)} text-xl  text-center rounded-lg  m-5 mt-2 ml-2  cursor-pointer `}>HTP</button>
 			</div>
 		</>
 	);
