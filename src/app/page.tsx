@@ -29,7 +29,7 @@ export default function Home() {
 
 		if (input === null) {
 			// The user canceled the prompt
-			alert("Session ID input canceled.");
+			// alert("Session ID input canceled.");
 			return;
 		}
 

@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, updateDoc } from "firebase/firestore";
 import { doc, setDoc, onSnapshot, getDoc } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
 import * as cotl from './Class'
 import { unsubscribe } from "diagnostics_channel";
 
@@ -16,7 +15,6 @@ export const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-export const analytics = getAnalytics(app);
 export const db = getFirestore(app);
 
 

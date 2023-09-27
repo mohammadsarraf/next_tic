@@ -18,9 +18,9 @@ const ScoreBoard: React.FC<ScoreBoardProps> = (props) => {
     const { playerOne, playerTwo } = props.scores;
     const { playerOneName, playerTwoName } = props.names;
     // 428 x 926 Pixels iphone 13 pro max 
-    const width = screen.width
+    // const width = screen.width
     return (
-        <div className={`flex flex-col items-center justify-between w-64 text-lg bg-white shadow-md rounded-md font-bold ${(width < 500) ? ('mt-auto mb-auto'): ('mt-2 mb-auto')}`}>
+        <div className={`flex flex-col items-center justify-between w-64 text-lg bg-white shadow-md rounded-md font-bold`}>
             <div className="score-header">Game Room: {props.ID}</div>
             <section className="flex w-full">
                 <span className={`w-1/2 py-3 text-center text-purple-700 ${!props.playerXPlaying ? "border-b-[6px] border-transparent": "border-b-[6px] border-purple-700"}`}>
