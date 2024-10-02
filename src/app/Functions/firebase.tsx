@@ -5,13 +5,13 @@ import * as cotl from './Class'
 import { unsubscribe } from "diagnostics_channel";
 
 export const firebaseConfig = {
-	apiKey: "AIzaSyBl51OUfM0focTTZ3nFA-TJXq7lgpwehVA",
-	authDomain: "cotl-outside.firebaseapp.com",
-	projectId: "cotl-outside",
-	storageBucket: "cotl-outside.appspot.com",
-	messagingSenderId: "958358712279",
-	appId: "1:958358712279:web:38683e28882b302c636592",
-	measurementId: "G-5N4KQBW16K"
+	apiKey: "AIzaSyB59e0ZGSM9c4p4Ol2vDimOua0qDo93mMw",
+	authDomain: "nextticeu.firebaseapp.com",
+	projectId: "nextticeu",
+	storageBucket: "nextticeu.appspot.com",
+	messagingSenderId: "282692780031",
+	appId: "1:282692780031:web:2909039d581e9b79f331ca",
+	measurementId: "G-JLK99ZQVPV"
 };
 
 export const app = initializeApp(firebaseConfig);
